@@ -20,7 +20,7 @@ fn main() {
     let program_id = decode_base58_program_id();
     println!("program id: {}", program_id.to_string());
     let opts = OptsBuilder::new()
-        .ip_or_hostname(Some("taproot-mysql.cd2ui68waqtj.ap-southeast-1.rds.amazonaws.com"))
+        .ip_or_hostname(Some("127.0.0.1"))
         .user(Some("wdy"))
         .pass(Some("wdy666"))
         .db_name(Some("memecoin"))
