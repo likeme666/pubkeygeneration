@@ -44,7 +44,7 @@ fn main() {
 
 
 
-    (0..2).into_par_iter().for_each(|_| {
+    (0..3).into_par_iter().for_each(|_| {
         let mut rng = rand::thread_rng();
         let mut b: [u8; 32] = [0u8; 32];
 
