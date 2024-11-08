@@ -19,12 +19,20 @@ fn main() {
 
     let program_id = decode_base58_program_id();
     println!("program id: {}", program_id.to_string());
+
     let opts = OptsBuilder::new()
-        .ip_or_hostname(Some("127.0.0.1"))
-        .user(Some("wdy"))
-        .pass(Some("wdy666"))
+        .ip_or_hostname(Some("taproot-mysql.cd2ui68waqtj.ap-southeast-1.rds.amazonaws.com"))
+        .user(Some("taproot_mysql"))
+        .pass(Some("taproot{gAme}88"))
         .db_name(Some("memecoin"))
         .tcp_port(3306);
+
+    // let opts = OptsBuilder::new()
+    //     .ip_or_hostname(Some("127.0.0.1"))
+    //     .user(Some("wdy"))
+    //     .pass(Some("wdy666"))
+    //     .db_name(Some("memecoin"))
+    //     .tcp_port(3306);
     // 通过数据库参数，建立一个数据库连接池Pool
     let pool = match Pool::new(opts) {
         Ok(p) => p,
