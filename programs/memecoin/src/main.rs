@@ -64,8 +64,9 @@ fn main() {
                     Ok(mut conn) => {
                         // 使用conn执行数据库操作
                         match conn.exec_drop(
-                            "insert into mint_address (address,seed) values (:address,:seed)",
+                            "insert into mint_address (program,address,seed) values (:program,:address,:seed)",
                             params! {
+                                "program" => BASE58_PROGRAM_ID,
                                 "address" => pubkey_str,
                                 "seed"=>random_u8
                             },
