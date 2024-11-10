@@ -8,8 +8,8 @@ extern crate mysql;
 
 
 // sol_presale 746xFerHtMfk3gFGkgKD5WNVeZgf93RSrqQcpQ2zSHfn
-// pump 4fTeRu8jGLDErJnPv9Cx9cdpRt9sm2vSvF41oTQ6CbED
-const BASE58_PROGRAM_ID: &str = "746xFerHtMfk3gFGkgKD5WNVeZgf93RSrqQcpQ2zSHfn";
+// pump 8VmiQfMyGSeksAkHLuXYhpXccsqhkPavH26g1BTFjpmg
+const BASE58_PROGRAM_ID: &str = "8VmiQfMyGSeksAkHLuXYhpXccsqhkPavH26g1BTFjpmg";
 // 解码 Base58 编码的程序 ID
 fn decode_base58_program_id() -> Pubkey {
     let decoded_bytes = bs58::decode(BASE58_PROGRAM_ID).into_vec().expect("msg");
