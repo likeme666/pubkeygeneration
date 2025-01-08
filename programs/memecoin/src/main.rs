@@ -9,7 +9,7 @@ extern crate mysql;
 
 // sol_presale 746xFerHtMfk3gFGkgKD5WNVeZgf93RSrqQcpQ2zSHfn
 // pump 8VmiQfMyGSeksAkHLuXYhpXccsqhkPavH26g1BTFjpmg
-const BASE58_PROGRAM_ID: &str = "8VmiQfMyGSeksAkHLuXYhpXccsqhkPavH26g1BTFjpmg";
+const BASE58_PROGRAM_ID: &str = "746xFerHtMfk3gFGkgKD5WNVeZgf93RSrqQcpQ2zSHfn";
 // 解码 Base58 编码的程序 ID
 fn decode_base58_program_id() -> Pubkey {
     let decoded_bytes = bs58::decode(BASE58_PROGRAM_ID).into_vec().expect("msg");
@@ -61,7 +61,7 @@ fn main() {
 
             let pubkey_str = pda_address.0.to_string();
 
-            if pubkey_str.to_lowercase().ends_with("meme") {
+            if pubkey_str.ends_with("punk") {
                 println!("Solana 公钥: {},  seed:{}", pubkey_str,random_u8);
                 match pool.get_conn() {
                     Ok(mut conn) => {
